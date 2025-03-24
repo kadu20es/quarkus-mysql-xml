@@ -1,5 +1,18 @@
 # quarkus-mysql
 
+### Informações acerca desta aplicação:
+
+Este sistema consiste em um estudo que gerou um exemplo de aplicação de Quarkus Java 17 acessando um banco de dados MySQL para geração de arquivos XML.
+
+O objetivo aqui era obter conhecimento para aplicação em uma tarefa no meu trabalho.
+
+A aplicação verifica o banco de dados a cada período de tempo em busca de novos dados. Caso encontre itens não processados, a aplicação realiza a geração do arquivo XML e marca o item como processado na tabela.
+
+O script de criação das tabelas de exemplo encontra-se em src/resources/script.sql.
+
+
+### About Quarkus:
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
@@ -11,7 +24,10 @@ You can run your application in dev mode that enables live coding using:
 ./mvnw compile quarkus:dev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+<details>
+    <summary>More informations</summary>
+    
+    > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
 
 ## Packaging and running the application
 
@@ -33,12 +49,12 @@ The application, packaged as an _über-jar_, is now runnable using `java -jar ta
 
 ## Creating a native executable
 
-You can create a native executable using: 
+You can create a native executable using:
 ```shell script
 ./mvnw package -Dnative
 ```
 
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using: 
+Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
 ```shell script
 ./mvnw package -Dnative -Dquarkus.native.container-build=true
 ```
@@ -69,3 +85,6 @@ Create your first JPA entity
 Easily start your REST Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+</details>
+
+
